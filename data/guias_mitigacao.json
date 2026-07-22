@@ -1,42 +1,42 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "ameaca": "Força Bruta SSH",
+    "categoria": "Acesso Inicial",
+    "severidade": "Alta",
+    "acao_imediata": "Bloquear o IP de origem suspeito no firewall de borda e derrubar conexões ativas.",
+    "prevencao": "Implementar Fail2Ban, alterar a porta padrão do SSH (22), exigir autenticação por chave pública e desativar o login de root.",
+    "ferramentas_indicadas": "Fail2Ban, Iptables, AWS WAF"
   },
   {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "ameaca": "SQL Injection (SQLi)",
+    "categoria": "Ataque a Aplicação Web",
+    "severidade": "Critica",
+    "acao_imediata": "Habilitar modo 'Under Attack' no WAF e inspecionar os logs do banco de dados para verificar se houve exfiltração.",
+    "prevencao": "Utilizar Prepared Statements (queries parametrizadas) no código fonte e realizar sanitização rigorosa de inputs dos usuários.",
+    "ferramentas_indicadas": "WAF (Cloudflare, ModSecurity), SonarQube"
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "ameaca": "Varredura de Portas (Port Scan)",
+    "categoria": "Reconhecimento",
+    "severidade": "Media",
+    "acao_imediata": "Monitorar a origem e aplicar limitação de taxa (Rate Limiting). Aplicar drop temporário se a varredura for agressiva.",
+    "prevencao": "Configurar regras de IDS/IPS para detectar padrões de varredura em massa (ex: Nmap SYN stealth) e fechar portas não essenciais.",
+    "ferramentas_indicadas": "Snort, Suricata, Zeek"
   },
   {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
-    "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "ameaca": "Comunicação com Botnet (C2)",
+    "categoria": "Comando e Controle",
+    "severidade": "Critica",
+    "acao_imediata": "Isolar a máquina interna infectada (host) da rede imediatamente e revogar credenciais do usuário afetado.",
+    "prevencao": "Implementar filtros de saída (Egress Filtering), integrar listas de Threat Intelligence no firewall e implantar EDR nos endpoints.",
+    "ferramentas_indicadas": "EDR (CrowdStrike, SentinelOne), Firewall L7"
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
-    "risco": "alto",
-    "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "ameaca": "Volume Anormal de DNS",
+    "categoria": "Exfiltração / DDoS",
+    "severidade": "Baixa",
+    "acao_imediata": "Verificar se o tráfego é legítimo (atualização de sistemas) ou se há indícios de DNS Tunneling.",
+    "prevencao": "Configurar DNS Sinkhole para domínios maliciosos e restringir consultas DNS externas apenas aos servidores autorizados.",
+    "ferramentas_indicadas": "Pi-hole, Cisco Umbrella, Wireshark"
   }
 ]
