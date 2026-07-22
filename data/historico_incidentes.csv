@@ -1,6 +1,6 @@
-data,canal,tema,resumo,resolvido
-2025-09-15,chat,CDB,Cliente perguntou sobre rentabilidade e prazos,sim
-2025-09-22,telefone,Problema no app,Erro ao visualizar extrato foi corrigido,sim
-2025-10-01,chat,Tesouro Selic,Cliente pediu explicação sobre o funcionamento do Tesouro Direto,sim
-2025-10-12,chat,Metas financeiras,Cliente acompanhou o progresso da reserva de emergência,sim
-2025-10-25,email,Atualização cadastral,Cliente atualizou e-mail e telefone,sim
+data,fonte_alerta,tipo_incidente,resumo_investigacao,status
+2026-06-10,Firewall,Varredura de Rede,Identificado scan Nmap agressivo buscando portas abertas. IP de origem bloqueado no WAF.,Resolvido
+2026-06-15,SIEM,Acesso Suspeito,Tentativa de login via RDP fora do horário comercial. Conta temporariamente suspensa.,Resolvido
+2026-06-22,Relatório Pentest,Vulnerabilidade Interna,Analista reportou falha de segmentação entre VLANs permitindo tráfego lateral. Regras de roteamento ajustadas.,Resolvido
+2026-07-05,EDR,Execução de Script,PowerShell não assinado executado no host WKST-05. Máquina isolada da rede para análise forense.,Em Andamento
+2026-07-18,Filtro Web,Phishing,Colaborador clicou em link malicioso, mas proxy bloqueou o download do payload.,Resolvido
