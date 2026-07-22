@@ -48,8 +48,8 @@ Profissional e estritamente técnico, porém acessível. Utiliza terminologia de
 ```mermaid
 flowchart TD
     A[Analista SOC] -->|Log ou Dúvida| B[Interface do Painel]
-    B --> C[LLM (Templair)]
+    B --> C[LLM - Templair]
     C --> D[Base de Conhecimento RAG]
-    D -.->|Alertas SIEM & Playbooks| C
+    D -.->|Alertas SIEM e Playbooks| C
     C --> E[Validação Ética White Hat]
     E --> F[Resposta de Mitigação]
