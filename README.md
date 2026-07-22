@@ -1,4 +1,4 @@
-# 🛡️ Templar AI: Agente de Cibersegurança Inteligente
+# 🛡️ Templair AI: Agente de Cibersegurança Inteligente
 
 ## Contexto
 
@@ -18,9 +18,9 @@ Os assistentes virtuais no setor de segurança da informação estão evoluindo 
 
 ### 1. Documentação do Agente
 
-Definição de **o que** o agente Sentinel faz e **como** ele funciona:
+Definição de **o que** o agente Templair faz e **como** ele funciona:
 
-- **Caso de Uso:** Suporte a analistas de SOC nível 1 e estudantes, ajudando na interpretação de logs (SIEM), cálculos de sub-redes e documentação de testes de invasão.
+- **Caso de Uso:** Suporte a analistas de SOC nível 1 e estudantes, ajudando na interpretação de logs (SIEM), cálculos de sub-redes e documentação de incidentes.
 - **Persona e Tom de Voz:** O agente atua como um mentor técnico experiente: direto, analítico e encorajador.
 - **Arquitetura:** Fluxo de ingestão de logs do usuário e cruzamento com a base de conhecimento técnica.
 - **Segurança (Guardrails):** Protocolos rígidos para recusar a criação de scripts maliciosos ofensivos, focando apenas em mitigação e defesa.
@@ -35,10 +35,10 @@ Utilização de **dados mockados** disponíveis na pasta [`data/`](./data/) para
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
-| `alertas_siem.csv` | CSV | Amostras de logs de tráfego e alertas de intrusão |
-| `historico_incidentes.csv` | CSV | Casos resolvidos anteriormente (Playbooks) |
-| `mitre_attck_subsets.json` | JSON | Táticas e técnicas de ameaças mapeadas |
-| `guias_mitigacao.json` | JSON | Políticas de firewall e boas práticas de rede |
+| `alertas_siem.csv` | CSV | Amostras de logs de tráfego de rede e alertas de intrusão |
+| `historico_incidentes.csv` | CSV | Casos resolvidos anteriormente pela equipe do SOC |
+| `guias_mitigacao.json` | JSON | Playbooks com táticas de ameaças e ações imediatas recomendadas |
+| `politicas_seguranca.json` | JSON | Diretrizes corporativas, regras de firewall e permissões de acesso |
 
 📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
@@ -60,9 +60,9 @@ Documentação da engenharia de prompts que define as "regras do jogo" para a IA
 
 O **protótipo funcional** do agente:
 
-- Interface interativa para o envio de perguntas e logs (Streamlit / Gradio).
+- Interface interativa para o envio de perguntas e logs simulando um painel SOC (Streamlit).
 - Integração com o LLM.
-- Conexão de contexto (RAG - Retrieval-Augmented Generation) com a base de conhecimento.
+- Conexão de contexto (RAG - Retrieval-Augmented Generation) com a base de conhecimento corporativa.
 
 📁 **Pasta:** [`src/`](./src/)
 
@@ -85,7 +85,7 @@ Metodologia de avaliação da qualidade e segurança do assistente:
 
 Apresentação do projeto (Problema, Solução e Valor):
 
-- Qual gargalo dos centros de operações de segurança o Sentinel resolve?
+- Qual gargalo dos centros de operações de segurança o Templair resolve?
 - Como ele empodera analistas juniores na prática?
 - Por que a implementação de IA Generativa com *guardrails* é o futuro da triagem cibernética?
 
@@ -101,10 +101,10 @@ Apresentação do projeto (Problema, Solução e Valor):
 ├── 📄 README.md
 │
 ├── 📁 data/                          # Dados mockados e relatórios
-│   ├── alertas_siem.csv              # Logs e alertas (CSV)
-│   ├── historico_incidentes.csv      # Playbooks de resposta (CSV)
-│   ├── mitre_attck_subsets.json      # Táticas de invasão (JSON)
-│   └── guias_mitigacao.json          # Regras e mitigação (JSON)
+│   ├── alertas_siem.csv              # Logs e alertas de rede (CSV)
+│   ├── historico_incidentes.csv      # Memória de resposta do SOC (CSV)
+│   ├── guias_mitigacao.json          # Táticas e ações imediatas (JSON)
+│   └── politicas_seguranca.json      # Regras de infraestrutura (JSON)
 │
 ├── 📁 docs/                          # Documentação do projeto
 │   ├── 01-documentacao-agente.md     # Persona, uso e arquitetura
@@ -114,7 +114,8 @@ Apresentação do projeto (Problema, Solução e Valor):
 │   └── 05-pitch.md                   # Roteiro de apresentação
 │
 ├── 📁 src/                           # Código-fonte da aplicação
-│   └── app.py                        # Interface do chatbot
+│   ├── app.py                        # Interface do chatbot (Streamlit)
+│   └── requirements.txt              # Dependências do projeto
 │
 ├── 📁 assets/                        # Diagramas e prints do projeto
 │   └── arquitetura_agente.png
