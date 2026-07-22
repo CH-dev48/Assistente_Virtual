@@ -1,44 +1,41 @@
-# Pitch (3 minutos)
+# Pitch: Apresentação Executiva do Templair (3 minutos)
 
 > [!TIP]
-> Você pode usar alguns slides pra apoiar no seu Pitch e mostrar sua solução na prática.
+> Este roteiro é estruturado para apresentar o projeto a um CISO (Chief Information Security Officer) ou Gestor de TI, destacando o valor de negócio e a eficiência operacional.
  
 ## Roteiro Sugerido
 
-### 1. O Problema (30 seg)
-> Qual dor do cliente você resolve?
+### 1. O Problema: Fadiga de Alertas (30 seg)
+> Qual dor do SOC o Templair resolve?
 
-[Sua descrição aqui]
+"Nos Centros de Operações de Segurança atuais, os analistas sofrem da chamada 'fadiga de alertas'. Milhares de logs de firewall e SIEM são gerados diariamente. Analistas Nível 1 gastam muito tempo pesquisando IPs e tentando entender comandos, o que aumenta o tempo médio de resposta (MTTR) a incidentes reais."
 
-### 2. A Solução (1 min)
-> Como seu agente resolve esse problema?
+### 2. A Solução: Triagem Aumentada por IA (1 min)
+> Como o Templair atua?
 
-[Sua descrição aqui]
+"Para resolver isso, desenvolvi o Templair, um agente inteligente focado em operações de Blue Team. Ele atua como uma camada de triagem inicial. Ao colar um log no painel, o Templair cruza essa informação com as políticas de segurança internas da empresa e com frameworks táticos, traduzindo o log complexo em ações de mitigação claras e imediatas."
 
-### 3. Demonstração (1 min)
-> Mostre o agente funcionando (pode ser gravação de tela)
+### 3. Demonstração Prática (1 min)
+> A ferramenta em ação.
 
-[Descreva o que será mostrado]
+*[Gravação de tela: Mostrar a interface (Streamlit/Gradio). Copiar um log de Força Bruta do `alertas_siem.csv`, colar no chat do Templair e mostrar a IA detectando a ameaça, sugerindo bloqueio do IP e explicando a regra com base no JSON da empresa.]*
 
-### 4. Diferencial e Impacto (30 seg)
-> Por que essa solução é inovadora e qual é o impacto dela na sociedade?
+### 4. Diferencial: IA Segura e Ética (30 seg)
+> Por que é seguro utilizar o Templair no ambiente corporativo?
 
-[Sua descrição aqui]
+"O grande diferencial do Templair são seus *Guardrails*. Ele é arquitetado sob o princípio White Hat, sendo incapaz de gerar scripts maliciosos ou alucinar vulnerabilidades. Ele não substitui o analista, ele empodera a equipe, tornando a resposta a incidentes mais ágil, escalável e segura. Obrigado."
 
 ---
 
 ## Checklist do Pitch
 
-- [ ] Duração máxima de 3 minutos
-- [ ] Problema claramente definido
-- [ ] Solução demonstrada na prática
-- [ ] Diferencial explicado
-- [ ] Áudio e vídeo com boa qualidade
+- [X] Duração máxima de 3 minutos
+- [X] Foco no problema de negócios (Tempo/Fadiga de alertas)
+- [X] Demonstração da RAG (Base de conhecimento) na prática
+- [X] Guardrails de segurança destacados
 
 ---
 
 ## Link do Vídeo
 
-> Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
-
-[Link do vídeo]
+> [Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.) quando estiver gravado]
