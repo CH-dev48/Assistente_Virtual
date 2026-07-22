@@ -1,23 +1,27 @@
 {
-  "nome": "João Silva",
-  "idade": 32,
-  "profissao": "Analista de Sistemas",
-  "renda_mensal": 5000.00,
-  "perfil_investidor": "moderado",
-  "objetivo_principal": "Construir reserva de emergência",
-  "patrimonio_total": 15000.00,
-  "reserva_emergencia_atual": 10000.00,
-  "aceita_risco": false,
-  "metas": [
+  "organizacao": "CyberTech Corp",
+  "setor": "Tecnologia e Defesa",
+  "nivel_maturidade_soc": "Intermediário",
+  "politicas_acesso": {
+    "mfa_obrigatorio": true,
+    "complexidade_senha": "Mínimo 14 caracteres, alfanumérico e símbolos",
+    "rotatividade_senha_dias": 90,
+    "acesso_remoto": "Permitido apenas via VPN Corporativa com certificado digital"
+  },
+  "regras_infraestrutura_rede": {
+    "segmentacao_vlans": true,
+    "bloqueio_trafego_lateral": "Ativo entre redes de Homologação e Produção",
+    "portas_bloqueadas_borda": [21, 22, 23, 3389],
+    "protocolo_gerenciamento": "Apenas SSH v2 utilizando chaves Ed25519"
+  },
+  "diretrizes_resposta_incidente": [
     {
-      "meta": "Completar reserva de emergência",
-      "valor_necessario": 15000.00,
-      "prazo": "2026-06"
+      "prioridade": "Alta",
+      "acao": "Isolar imediatamente o host da rede em caso de suspeita de Ransomware ou persistência de C2."
     },
     {
-      "meta": "Entrada do apartamento",
-      "valor_necessario": 50000.00,
-      "prazo": "2027-12"
+      "prioridade": "Média",
+      "acao": "Bloquear IPs externos após 5 tentativas falhas de autenticação em menos de 1 minuto."
     }
   ]
 }
